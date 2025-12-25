@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 7%;
+    --foreground: 0 0% 92%;
+
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 92%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 92%;
+
+    --primary: 0 0% 92%;
+    --primary-foreground: 0 0% 7%;
+
+    --secondary: 0 0% 14%;
+    --secondary-foreground: 0 0% 62%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 52%;
+
+    --accent: 145 55% 45%;
+    --accent-foreground: 0 0% 7%;
+
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 0 0% 92%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 145 55% 45%;
+
+    --sidebar-background: 0 0% 7%;
+    --sidebar-foreground: 0 0% 92%;
+    --sidebar-primary: 0 0% 92%;
+    --sidebar-primary-foreground: 0 0% 7%;
+    --sidebar-accent: 0 0% 14%;
+    --sidebar-accent-foreground: 0 0% 92%;
+    --sidebar-border: 0 0% 16%;
+    --sidebar-ring: 145 55% 45%;
+
+    --radius: 0.5rem;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply mx-auto px-6 md:px-8;
+    max-width: 880px;
+  }
+
+  .section-gap {
+    @apply py-16 md:py-24;
+  }
+
+  .card-hover {
+    @apply bg-card border border-border rounded-lg p-5 transition-all duration-200 hover:border-accent/40 hover:shadow-sm;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-mono bg-secondary text-secondary-foreground rounded;
+  }
+
+  .link-subtle {
+    @apply text-muted-foreground hover:text-foreground transition-colors;
+  }
+
+  .link-accent {
+    @apply text-accent hover:text-accent/80 transition-colors;
+  }
+
+  .prompt::before {
+    content: '~';
+    @apply text-accent mr-2 font-mono;
+  }
+}
+
+@layer utilities {
+  .text-h1 {
+    @apply text-3xl md:text-4xl font-semibold tracking-tight;
+  }
+
+  .text-h2 {
+    @apply text-xl md:text-2xl font-semibold tracking-tight;
+  }
+
+  .text-h3 {
+    @apply text-base md:text-lg font-medium;
+  }
+
+  .text-body {
+    @apply text-base leading-relaxed;
+  }
+
+  .text-small {
+    @apply text-sm leading-relaxed;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}

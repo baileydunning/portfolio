@@ -1,0 +1,7 @@
+type Photography @table(database: "data") @export(name: "photography") {
+  id: ID! @primaryKey
+  photo: Blob!
+  description: String
+  place: String
+  album: String
+}
