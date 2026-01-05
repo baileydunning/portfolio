@@ -12,7 +12,7 @@ export function AboutSection() {
         <div className="grid md:grid-cols-2 gap-10">
           <div className="space-y-4 text-body text-muted-foreground">
             <p>
-              I'm a curious and adaptable problem-solver who thrives at the intersection of technology, education, and the outdoors. With a background in software engineering, instructional design, and community engagement, I am driven by a passion for adventure, lifelong learning, and collaboration, using my skills to build meaningful technology, create impactful educational experiences, and foster strong communities.
+              My background spans software engineering, instructional design, and media work. Travel, time outdoors, and photography influence how I think about place, perspective, and how people engage with technology and learning.
             </p>
             <div className="flex items-center gap-2 text-small pt-2">
               <MapPin size={14} className="text-accent" />
